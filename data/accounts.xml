@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accounts>
+    <!--
+        account: login, password (демо-хранение в открытом виде — только для реконструкции
+        исторического протокола 2012 года, для продакшена используйте password_hash()),
+        firstName, lastName, middleName, email, clientAccount (баланс бонусных баллов),
+        guid — последний привязанный partnerClientId (device id) авторизованной сессии.
+    -->
+    <account login="test@ozon.ru" password="123456" firstName="Иван" lastName="Иванов" middleName="Иванович" email="test@ozon.ru" clientAccount="150" guid="8014b453d86cf99237cbbfb753124bc"/>
+
+    <account login="demo@argon.ru" password="demo12345" firstName="Анна" lastName="Смирнова" middleName="Сергеевна" email="demo@argon.ru" clientAccount="0" guid=""/>
+</accounts>

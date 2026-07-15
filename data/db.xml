@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db>
+    <!--
+        categories: id, parentId (0 = корень), name, webSectionName, weight
+        Соответствует Models/Remote/CatalogItem.java
+    -->
+    <categories>
+        <category id="1" parentId="0" name="Книги" webSectionName="books" weight="1"/>
+        <category id="101" parentId="1" name="Художественная литература" webSectionName="fiction" weight="1"/>
+        <category id="102" parentId="1" name="Компьютерная литература" webSectionName="compbooks" weight="2"/>
+        <category id="103" parentId="1" name="Детская литература" webSectionName="childbooks" weight="3"/>
+
+        <category id="2" parentId="0" name="Электроника" webSectionName="electronics" weight="2"/>
+        <category id="201" parentId="2" name="Ноутбуки" webSectionName="notebooks" weight="1"/>
+        <category id="202" parentId="2" name="Телефоны" webSectionName="phones" weight="2"/>
+        <category id="203" parentId="2" name="Фотоаппараты" webSectionName="cameras" weight="3"/>
+
+        <category id="3" parentId="0" name="Дом и дача" webSectionName="home" weight="3"/>
+        <category id="301" parentId="3" name="Кухонная утварь" webSectionName="kitchen" weight="1"/>
+
+        <category id="4" parentId="0" name="Музыка" webSectionName="music" weight="4"/>
+        <category id="401" parentId="4" name="CD/MP3" webSectionName="cdmp3" weight="1"/>
+    </categories>
+
+    <!--
+        item: атрибуты соответствуют полям GoodItem.java / Detail.java / ClassAttribute.java
+        id, categoryId, name, author, price, discountPrice, annotation, itemType, itemTypeId,
+        availability, itemAvailabilityId, isNew, isSpecialPrice, bargainSale, year, weight,
+        path (картинка), clientRating, clientRatingCount, isbn, otherName, media
+    -->
+    <items>
+        <item id="1001" categoryId="101" name="Мастер и Маргарита" author="Михаил Булгаков"
+              price="350.00" discountPrice="290.00"
+              annotation="Роман Михаила Булгакова, одно из самых загадочных произведений в истории русской литературы XX века."
+              itemType="Книга" itemTypeId="1" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="true" bargainSale="false" year="2011" weight="400"
+              path="1/small/1001.jpg" clientRating="4.9" clientRatingCount="245"
+              isbn="9785171112223" otherName="" media="Твёрдый переплёт"/>
+
+        <item id="1002" categoryId="101" name="Преступление и наказание" author="Фёдор Достоевский"
+              price="410.00" discountPrice=""
+              annotation="Классический роман о преступлении студента Раскольникова и его нравственных мучениях."
+              itemType="Книга" itemTypeId="1" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="false" bargainSale="false" year="2010" weight="520"
+              path="1/small/1002.jpg" clientRating="4.8" clientRatingCount="198"
+              isbn="9785699452233" otherName="" media="Твёрдый переплёт"/>
+
+        <item id="1003" categoryId="102" name="PHP 7. Объекты, шаблоны и методики программирования" author="Мэтт Зандстра"
+              price="1490.00" discountPrice="1290.00"
+              annotation="Классическое руководство по объектно-ориентированному программированию на PHP."
+              itemType="Книга" itemTypeId="1" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="true" isSpecialPrice="true" bargainSale="false" year="2017" weight="900"
+              path="1/small/1003.jpg" clientRating="4.7" clientRatingCount="56"
+              isbn="9785907144809" otherName="" media="Мягкая обложка"/>
+
+        <item id="1004" categoryId="103" name="Приключения Незнайки и его друзей" author="Николай Носов"
+              price="280.00" discountPrice=""
+              annotation="Добрая сказочная повесть о коротышках из Цветочного города."
+              itemType="Книга" itemTypeId="1" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="false" bargainSale="false" year="2015" weight="300"
+              path="1/small/1004.jpg" clientRating="5.0" clientRatingCount="87"
+              isbn="9785171009721" otherName="" media="Твёрдый переплёт"/>
+
+        <item id="2001" categoryId="201" name="Ноутбук ASUS X501A" author=""
+              price="15990.00" discountPrice="14490.00"
+              annotation="15.6-дюймовый ноутбук на базе Intel Celeron, 4 Гб ОЗУ, 500 Гб HDD."
+              itemType="Ноутбук" itemTypeId="2" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="true" isSpecialPrice="true" bargainSale="false" year="2013" weight="2300"
+              path="2/small/2001.jpg" clientRating="4.3" clientRatingCount="34"
+              isbn="" otherName="X501A" media=""/>
+
+        <item id="2002" categoryId="202" name="Samsung Galaxy S III" author=""
+              price="22990.00" discountPrice=""
+              annotation="Флагманский смартфон Samsung с 4.8-дюймовым экраном Super AMOLED."
+              itemType="Смартфон" itemTypeId="3" availability="Нет в наличии" itemAvailabilityId="0"
+              isNew="true" isSpecialPrice="false" bargainSale="false" year="2012" weight="133"
+              path="2/small/2002.jpg" clientRating="4.6" clientRatingCount="512"
+              isbn="" otherName="GT-I9300" media=""/>
+
+        <item id="2003" categoryId="203" name="Canon EOS 550D Kit" author=""
+              price="27990.00" discountPrice="25990.00"
+              annotation="Зеркальный фотоаппарат Canon с объективом 18-55mm, 18 Мп."
+              itemType="Фотоаппарат" itemTypeId="4" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="true" bargainSale="true" year="2011" weight="530"
+              path="2/small/2003.jpg" clientRating="4.5" clientRatingCount="121"
+              isbn="" otherName="550D" media=""/>
+
+        <item id="3001" categoryId="301" name="Набор кастрюль Tefal Duetto" author=""
+              price="4990.00" discountPrice=""
+              annotation="Набор из 8 предметов с антипригарным покрытием и стеклянными крышками."
+              itemType="Посуда" itemTypeId="5" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="false" bargainSale="false" year="2012" weight="4500"
+              path="3/small/3001.jpg" clientRating="4.4" clientRatingCount="18"
+              isbn="" otherName="" media=""/>
+
+        <item id="4001" categoryId="401" name="Кино — Группа крови" author="Кино"
+              price="390.00" discountPrice=""
+              annotation="Культовый альбом легендарной группы Кино на CD."
+              itemType="Музыкальный CD" itemTypeId="6" availability="Отгружается со склада" itemAvailabilityId="1"
+              isNew="false" isSpecialPrice="false" bargainSale="false" year="1988" weight="100"
+              path="4/small/4001.jpg" clientRating="4.9" clientRatingCount="63"
+              isbn="" otherName="" media="Audio CD"/>
+    </items>
+</db>
