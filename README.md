@@ -1,7 +1,7 @@
 <h1 align="center">ARGON.ru</h1>
 
 <p align="center">
-  <img src="images/logo.png" alt="Логотип">
+  <img src="images/logo.png" width="25%" alt="Логотип">
 </p>
 
 <div align="center">
